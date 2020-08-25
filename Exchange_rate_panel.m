@@ -1,5 +1,5 @@
 %////////////////////////////////////////////////////////////////%
-%//////-Panel Data model Multi-Country -Model of Excbage Rate (Assessment 1) -///%
+%//////-Panel Data model Multi-Country -Model of Exchange Rate (Assessment 1) -///%
 %////////////////////////////////////////////////////////////////%
 
 disp('------------------------------------------------------------------');
@@ -337,7 +337,7 @@ for i = 1:size(mtx_z,2);
     het_z(i,2)=archtest(mtx_z(:,i));
 end
 
-%archtest(res) returns a logical value with the rejection decision from conducting the Engle’s ARCH test for residual heteroscedasticity in the univariate residual series res.
+%archtest(res) returns a logical value with the rejection decision from conducting the EngleÂ’s ARCH test for residual heteroscedasticity in the univariate residual series res.
 % The result h = 1 indicates that you should reject null hypothesis of no conditional heteroscedasticity and conclude that there are significant ARCH effects in the return series.
 
 %Durbin-Watson test p-values (Ho: Residuals from a linear regression are
