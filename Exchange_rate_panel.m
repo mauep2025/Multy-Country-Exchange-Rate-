@@ -358,8 +358,6 @@ end
 %---h = 0 indicates failure to reject the trend-stationary null.
 
 %Clearing information (In order to get a more space, and not get confusee,
-%in the workspace ------- this line it is very optional------- either you
-%avoid this line just tranforming in green color with "%" or not
 %clear b_ctr a_ctr y_graph a_pool b_pool eur eur_1 unk unk_1 jap jap_1 can can_1 den den_1 nor nor_1 swe swe_1 swi swi_1 kor kor_1 uns uns_1
 
 %/////////////////////////////////%
@@ -367,7 +365,7 @@ end
 %/////////////////////////////////
 
 disp('-------------------------------------------------------------------');
-disp(' 2. Etimating Within-Group Estimator (Fixed Effects Model)         ');
+disp(' 2. Estimating Within-Group Estimator (Fixed Effects Model)         ');
 disp('-------------------------------------------------------------------');
 
 number=[1 2 3 3 4 5 6 7 8 9]';
