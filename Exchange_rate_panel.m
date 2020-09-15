@@ -71,7 +71,7 @@ for i = 1:size(mtx_fx,2)
 end
 
 %Delta S natural logarithm of the nominal exchange rate for equation 1
-%(Trnaformation using difference for the exchange rate)
+%(Transformation using difference for the exchange rate)
 for i=1:size(mtx_fx,2)
     for ii=2:size(mtx_fx,1)
         mtx_diff(ii-1,i)=mtx_fx(ii,i)-mtx_fx(ii-1,i);
@@ -94,14 +94,14 @@ end
 %Size of the vector
 i  = size(mtx_diff,1)*size(mtx_diff,2);
 ii = size(mtx_z,1)*size(mtx_z,2);
-%Using the pooled data from the two matrixes (or adjusting the information in a Panel Data Structure (where the order is Euro UK JAP CAN DEN NORWAY SWE SWI KOR)
+%Using the pooled data from the two matrixes or adjusting the information in a Panel Data Structure (where the order is Euro UK JAP CAN DEN NORWAY SWE SWI KOR)
 %--Delta s
 s_pool=reshape(mtx_diff,i,1);
 %--Pooled Z
 z_pool=reshape(mtx_z,ii,1);
 
 
-%/////-------Graph inspection
+%/////-------Graph Inspection
 
 figure;
 plot(t, eur_1(:,1), 'LineWidth',1.9), title('Graph: Nominal Exchange Rate Euro/US (1995m1-2007m12)')
@@ -293,7 +293,7 @@ for i=1 : size(mtx_diff,2)
     
 end
 
-%--Storing a and b (the constant and the ciefficient) and the t-student of both for all countries (Euro UK JAP CAN DEN NORWAY SWE SWI KOR)
+%--Storing a and b (the constant and the coefficient) and the t-student of both for all countries (Euro UK JAP CAN DEN NORWAY SWE SWI KOR)
 %(Euro UK JAP CAN DEN NORWAY SWE SWI KOR)
 a_b_ctr=[a_ctr; b_ctr];
 t_student_ctr= [t_ctr_intercept; t_ctr_coef] 
@@ -357,7 +357,7 @@ end
 %---h = 1 indicates rejection of the trend-stationary null in favor of the unit root alternative.
 %---h = 0 indicates failure to reject the trend-stationary null.
 
-%Clearing information (In order to get a more space, and not get confusee,
+%Clearing information (In order to get a more space, and not get confuse,
 %clear b_ctr a_ctr y_graph a_pool b_pool eur eur_1 unk unk_1 jap jap_1 can can_1 den den_1 nor nor_1 swe swe_1 swi swi_1 kor kor_1 uns uns_1
 
 %/////////////////////////////////%
@@ -383,7 +383,7 @@ title('Graph: Plot data by Countries');
 %title('Graph: Plot data by Year');
 
 n_ctr=size(mtx_diff,2);
-%Subtracting the average value of each country from the cuntry observation
+%Subtracting the average value of each country from the country observation
 %for tha variable z and diff
 for i=1 : n_ctr
     x_z(:,i)=mtx_z(:,i)-mean(mtx_z(:,i));
@@ -420,7 +420,7 @@ beta_fe=inv(x_z_1'*m*x_z_1)*x_z_1'*m*y_s_1;
 
 
 
-%Biulding a table 
+%Building a table 
 tb_fe=table(y_s_1,x_z_1,number_2,'VariableNames',{'NominalEx','RealEx','Countries'} );
 tb_fe
 
@@ -501,7 +501,7 @@ disp(['ExReal:',num2str(mdl_tb_fe.Coefficients{'RealEx',1})]);
  res_re=sum(res_re_1.^2);
  
  %------------------------------------------------------------------%%%
- %----------------- Panel Data Models using the Panel toolbox------%%%
+ %----------------- Panel Data Models using the Panel toolbox-------%%%
  %------------------------------------------------------------------%%%
  
 
